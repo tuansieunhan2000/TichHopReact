@@ -1,20 +1,22 @@
 import React, { Component } from 'react'
 import ProductList from '../../Components/ProductList'
 
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Axios from "axios";
 import {connect} from "react-redux"
 import Map from '../../Components/Map';
 import Footer from '../../Components/Footer';
 import 'bootstrap/dist/css/bootstrap.css';
 import Header from '../../Components/Header';
+import Banner from '../../Components/Banner';
 
 class HomeScreen extends Component {
     render() {
         return (
             <div>
                 <Header/>
-       
+                <Banner/>
+            
                 <ProductList productList={this.props.productList}/>
                 <Map/>
                 <Footer/>

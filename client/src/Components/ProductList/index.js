@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import ProductItem from "../ProductItem";
+import "./main.css";
 
 class ProductList extends Component {
   render() {
+    console.log(this.props.productList);
     return (
       <section className="new">
         <div className="container">
@@ -12,10 +14,14 @@ class ProductList extends Component {
           <div className="row">
                 {
                     this.props.productList.map((item, index)=>{
-                        <div className="col-md-3 col-sm-6 col-xs-12">
+                      return   <div className="col-md-3 col-sm-6 col-xs-12" key= {index}>
+                      
                             <ProductItem item ={item}/>
+                            
+                            
                         </div>
                     })
+                  
                 }
              
           </div>
